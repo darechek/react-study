@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {Card, Image, Button} from 'semantic-ui-react';
-import './../css/photo.css'
+import './../style/photo.css'
 
 export default class Photo extends PureComponent {
 	static propTypes = {

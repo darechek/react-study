@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import PhotoCard from './PhotoCard';
 import {getPhotoUrl} from './../api'
-import './../css/photos.css'
+import './../style/photos.css'
 
 export default class Photos extends PureComponent {
 	static propTypes = {
