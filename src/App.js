@@ -5,7 +5,7 @@ import {requestUrl } from './api'
 
 export default class App extends PureComponent {
 	state = {
-		 photos: null,
+		photos: null,
 		isFetching: true,
 	}
 

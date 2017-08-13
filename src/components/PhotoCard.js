@@ -25,7 +25,6 @@ export default class Photo extends PureComponent {
 	render() {
 		const {isLiked} = this.state;
 		const {photoUrl} = this.props;
-		const {photos} = this.props;
 		const {id, title} = this.props.photo;
 		const like = Boolean(isLiked);
 
@@ -54,7 +53,6 @@ export default class Photo extends PureComponent {
 						/>
 						<Button 
 							icon="trash outline"
-							/*onClick={() => onDeleteClickS(this.props.photo.id)}*/
 							onClick={this.handleDeleteClick}
 						/>
 					</Card.Content>
