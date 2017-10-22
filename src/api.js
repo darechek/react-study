@@ -2,7 +2,7 @@ export const https = 'https://';
 
 export const responseData = {
     method: 'flickr.photosets.getPhotos',
-    api_key: '2724262f8391cf533ec51ca2b4d35133',
+    api_key: 'YOUR-API-KEY',
     photoset_id: '72157683124613654',
     user_id: '156575077@N06',
     auth_token: '72157684066028034-5ba0a94bfe302f07',
