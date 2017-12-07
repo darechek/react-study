@@ -1,33 +1,24 @@
 {
-  "name": "gallery",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "node-sass-chokidar": "0.0.3",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "semantic-ui-css": "^2.2.11",
-    "semantic-ui-react": "^0.71.2"
-  },
-  "devDependencies": {
-    "classnames": "^2.2.5",
-    "eslint": "^4.4.1",
-    "eslint-config-airbnb": "^15.0.2",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.1.0",
-    "node-sass": "^4.5.3",
-    "react-scripts": "1.0.11",
-    "sass-loader": "^6.0.6",
-    "semantic-ui": "^2.2.11"
-  },
-  "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "react-scripts start",
-    "lint": "eslint src",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+	"name": "gal",
+	"author": "dd",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"node-sass-chokidar": "0.0.3",
+		"react": "^16.2.0",
+		"react-dom": "^16.2.0",
+		"semantic-ui-css": "^2.2.12",
+		"semantic-ui-react": "^0.77.0"
+	},
+	"devDependencies": {
+		"react-scripts": "1.0.17"
+	},
+	"scripts": {
+		"build-css": "node-sass-chokidar src/ -o src/",
+		"watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject"
+	}
 }

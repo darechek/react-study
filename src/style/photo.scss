@@ -1,19 +1,22 @@
+$pink-heart: #ff4a92;
+$shadow: 0 3px 5px 0 rgba(0, 0, 0, .45);
+
 .photo-card {
-	margin: 17px !important;
-	box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.45) !important;
-}
+	margin: 15px !important;
+	width: 180px !important;
+	box-shadow: $shadow !important;
 
-.photo-card__image {
-	&:hover {
-		opacity: 0.9;
+	&__image {
+		&:hover {
+			opacity: 0.9;
+		}	
 	}
-}
 
-.photo-card__title {
-	margin-left: 15px;
-}
+	&__title {
+		padding-left: 1em;
+	}
 
-.photo-card--liked {
-	color: #ff6ea8 !important;
-	background: #e0e1e2 !important;
+	&--liked {
+		color: $pink-heart !important;
+	}
 }

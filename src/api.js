@@ -1,6 +1,4 @@
-export const https = 'https://';
-
-export const responseData = {
+const requestData = {
     method: 'flickr.photosets.getPhotos',
     api_key: '2724262f8391cf533ec51ca2b4d35133',
     photoset_id: '72157683124613654',
@@ -9,14 +7,15 @@ export const responseData = {
     api_sig: 'b254f9aee82453c148435509af05ddec',
 };
 
+const https = 'https://';
+
 export const requestUrl = `${https}api.flickr.com/services/rest/?\
-method=${responseData.method}\
-&api_key=${responseData.api_key}\
-&photoset_id=${responseData.photoset_id}\
-&user_id=${responseData.user_id}\
+method=${requestData.method}\
+&api_key=${requestData.api_key}\
+&photoset_id=${requestData.photoset_id}\
+&user_id=${requestData.user_id}\
 &format=json&nojsoncallback=1`;
 
 export const getPhotoUrl = (photo) => {
 	return `${https}farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
 };
-
