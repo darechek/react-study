@@ -20,7 +20,7 @@ export default class App extends PureComponent {
 		.then(json => {
 			this.setState({
 				isFetching: false,
-				photos: json.photoset.photo,
+				photos: json.photoset.photo
 			});
 		});
 	}
