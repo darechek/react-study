@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import {requestUrl} from './api';
-
 import CustomLoader from './components/Loader';
 import Gallery from './components/Gallery';
 
@@ -16,13 +15,13 @@ export default class App extends PureComponent {
 		localStorage.getItem('liked') ? this.setState({ likedPhotos: JSON.parse(localStorage.getItem('liked'))}) : null;
 
 		fetch(requestUrl)
-		.then(response => response.json())
-		.then(json => {
-			this.setState({
-				isFetching: false,
-				photos: json.photoset.photo
+			.then(response => response.json())
+			.then(json => {
+				this.setState({
+					isFetching: false,
+					photos: json.photoset.photo
+				});
 			});
-		});
 	}
 
 	handleLikeClick = (id) => {
@@ -45,14 +44,14 @@ export default class App extends PureComponent {
 		const {photos, isFetching, likedPhotos} = this.state;
 		
 		return (
-				isFetching ? 
-					<CustomLoader /> 
-					: <Gallery
-							photos={photos}
-							likedPhotos={likedPhotos}
-							onDeleteClick={this.handleDeleteClick}
-							onLikeClick={this.handleLikeClick}
-					/>
+			isFetching ? 
+				<CustomLoader /> 
+				: <Gallery
+					photos={photos}
+					likedPhotos={likedPhotos}
+					onDeleteClick={this.handleDeleteClick}
+					onLikeClick={this.handleLikeClick}
+				/>
 				
 		);
 	}

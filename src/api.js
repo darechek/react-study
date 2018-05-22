@@ -1,10 +1,10 @@
 const requestData = {
-    method: 'flickr.photosets.getPhotos',
-    api_key: 'YOUR-API-KEY',
-    photoset_id: '72157683124613654',
-    user_id: '156575077@N06',
-    auth_token: '72157684066028034-5ba0a94bfe302f07',
-    api_sig: 'b254f9aee82453c148435509af05ddec',
+	method: 'flickr.photosets.getPhotos',
+	api_key: '2724262f8391cf533ec51ca2b4d35133',
+	photoset_id: '72157683124613654',
+	user_id: '156575077@N06',
+	auth_token: '72157684066028034-5ba0a94bfe302f07',
+	api_sig: 'b254f9aee82453c148435509af05ddec',
 };
 
 const https = 'https://';

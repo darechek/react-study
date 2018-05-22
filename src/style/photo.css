@@ -1,0 +1,10 @@
+.photo-card {
+  margin: 15px !important;
+  width: 180px !important;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.45) !important; }
+  .photo-card__image:hover {
+    opacity: 0.9; }
+  .photo-card__title {
+    padding-left: 1em; }
+  .photo-card--liked {
+    color: #ff4a92 !important; }

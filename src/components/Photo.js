@@ -1,17 +1,15 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-
 import {Card, Image, Button} from 'semantic-ui-react';
-
-import './../style/style.css'
+import './../style/style.css';
 
 export default class Photo extends PureComponent {
 	static propTypes = {
 		photo: PropTypes.object.isRequired,
-		photoUrl: PropTypes.string,
+		photoUrl: PropTypes.string.isRequired,
 		onDeleteClick: PropTypes.func.isRequired,
 		onLikeClick: PropTypes.func.isRequired,
-		isPhotoLiked: PropTypes.bool,
+		isPhotoLiked: PropTypes.bool.isRequired,
 	}
  
 	handleLikeClick = () => this.props.onLikeClick(this.props.photo.id);
@@ -24,29 +22,29 @@ export default class Photo extends PureComponent {
 		const likedClass = isPhotoLiked ? 'photo-card--liked' : null;
 
 		return (
-				<Card 
-					key={id}
-					className="photo-card"
-				>
-					<Image 
-						className={'photo-card__image'}
-						src={photoUrl}
-						alt={title}
-						onClick={this.handleOpenClick}
+			<Card 
+				key={id}
+				className="photo-card"
+			>
+				<Image 
+					className={'photo-card__image'}
+					src={photoUrl}
+					alt={title}
+					onClick={this.handleOpenClick}
+				/>
+				<span className="photo-card__title">{title}</span>
+				<Card.Content extra>
+					<Button
+						className={likedClass}
+						icon="heart"
+						onClick={this.handleLikeClick}
 					/>
-					<span className="photo-card__title">{title}</span>
-					<Card.Content extra>
-						<Button
-							className={likedClass}
-							icon="heart"
-							onClick={this.handleLikeClick}
-						/>
-						<Button 
-							icon="trash outline"
-							onClick={this.handleDeleteClick}
-						/>
-					</Card.Content>
-				</Card>
+					<Button 
+						icon="trash outline"
+						onClick={this.handleDeleteClick}
+					/>
+				</Card.Content>
+			</Card>
 		);
 	}
 }
