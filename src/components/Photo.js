@@ -40,7 +40,7 @@ export default class Photo extends PureComponent {
 						onClick={this.handleLikeClick}
 					/>
 					<Button 
-						icon="trash outline"
+						icon="trash alternate outline"
 						onClick={this.handleDeleteClick}
 					/>
 				</Card.Content>
